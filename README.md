@@ -25,5 +25,10 @@ Considering creating an instruction document. Most of the functions have been ma
 * **Dytser** - For the original function of renaming vertax group.
 * **Shotariya** - For the original function of material-combiner. - [Original Material-Combiner-Addon](https://github.com/Grim-es/material-combiner-addon/)
 
+# 一些中文内容
+B站id：不太亮的诸葛亮
 
+怪猎mod交流群：640945651
+
+碧蓝幻想Relink交流群：108645757
 
