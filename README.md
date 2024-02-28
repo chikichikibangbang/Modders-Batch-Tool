@@ -28,7 +28,7 @@ Considering creating an instruction document. Most of the functions have been ma
 # 一些中文内容
 B站id：不太亮的诸葛亮
 
-怪猎mod交流群：640945651
+怪猎mod作者交流群：640945651
 
-碧蓝幻想Relink交流群：108645757
+碧蓝幻想Relink mod作者交流群：108645757
 
