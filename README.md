@@ -1,5 +1,5 @@
 # Modders-Batch-Tool
-* Utility toolkits to do a lot of repetitive operations automatically for modders.
+* Utility toolkits to do a lot of repetitive operations automatically for modders, mainly used for mmd models.
 * Now it supports **MonsterHunterWorld**, **MonsterHunterRise** and **GranblueFantasyRelink**.
 * It has the Chinese translation.
   
