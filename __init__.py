@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Modder's Batch Tool",
-    "author": "Korone, Zjcs, Dytser, Shotariya",
-    "version": (1, 2, 0),
+    "author": "诸葛不太亮, 折戟沉沙丶丿, Dytser, Shotariya",
+    "version": (1, 2, 5),
     "blender": (2, 93, 0),
     "location": "View3D > Tool Shelf > Modder's Batch Tool",
     "description": "Utility tools to do a lot of repetitive operations automatically",
@@ -18,6 +18,7 @@ from bpy.props import BoolProperty
 from .modules.separatebymaterials import SeparateByMaterials
 from .modules.cleanzerovg import CleanZeroVG
 from .modules.normalize_limit_vg import NormalizeLimitVG
+from .modules.split_seam import SplitSeamSharp
 #MHRise
 from .Games.MHRise.ImportMesh import importMHRfmesh, importMHRmmesh
 from .Games.MHRise.SnapBones_MMD import SnapBonesMMDtoMHR
@@ -36,7 +37,9 @@ from .Games.MHWorld.addemptymesh import AddMHWorldemptymesh
 #GranblueFantasyRelink
 from .Games.GranblueFantasyRelink.gbfr_tpose import GBFRTPOSE
 from .Games.GranblueFantasyRelink.SnapBones_MMD import SnapBonesMMDtoGBFR
+from .Games.GranblueFantasyRelink.SnapBones_UMA import SnapBonesUMAtoGBFR
 from .Games.GranblueFantasyRelink.MMDtoGBFR import MMDtoGBFRRename
+from .Games.GranblueFantasyRelink.UMAtoGBFR import UMAtoGBFRRename
 
 #ResidentEvil4
 from .Games.ResidentEvil4.MMDtoRE4 import MMDtoRE4Rename
@@ -190,6 +193,10 @@ class MHWorld(bpy.types.Panel):
         row = layout.row()
         row.operator("tool.normalizelimitvg",icon="OUTLINER_DATA_MESH")
 
+        layout.label(text="batch split seam")
+        row = layout.row()
+        row.operator("mod_tools.split_seam_sharp",icon="OUTLINER_DATA_MESH")
+
         #layout.label(text="batch add empty meshes with properties")
         #row = layout.row()
         #row.operator("tool.addmhworldemptymesh",icon="OUTLINER_OB_MESH")
@@ -219,14 +226,22 @@ class GranblueFantasyRelink(bpy.types.Panel):
         row.label(text="make sure you select mmd armature first and then the game armature in the object mode", icon="INFO")
         row = layout.row()
         row.operator("tool.snapbonesmmdtogbfr",icon="OUTLINER_OB_ARMATURE")
+        row = layout.row()
+        row.operator("tool.snapbonesumatogbfr",icon="OUTLINER_OB_ARMATURE")
 
         layout.label(text="batch rename vertax groups")
         row = layout.row()
         row.operator("tool.mmdtogbfrrename",icon="OUTLINER_DATA_MESH")
+        row = layout.row()
+        row.operator("tool.umatogbfrrename",icon="OUTLINER_DATA_MESH")
     
         layout.label(text="batch normalize and limit meshes by 4wt")
         row = layout.row()
         row.operator("tool.normalizelimitvg",icon="OUTLINER_DATA_MESH")
+
+        layout.label(text="batch split seam")
+        row = layout.row()
+        row.operator("mod_tools.split_seam_sharp",icon="OUTLINER_DATA_MESH")
    
 class ResidentEvil4(bpy.types.Panel):
     bl_label = "ResidentEvil4"
@@ -276,6 +291,7 @@ classes = (
     SeparateByMaterials,
     CleanZeroVG,
     NormalizeLimitVG,
+    SplitSeamSharp,
 
     MHRise,
     importMHRfmesh,
@@ -298,7 +314,10 @@ classes = (
     GranblueFantasyRelink,
     GBFRTPOSE,  
     SnapBonesMMDtoGBFR,
+    SnapBonesUMAtoGBFR,
     MMDtoGBFRRename,
+    UMAtoGBFRRename,
+  
 
     ResidentEvil4,
     MMDtoRE4Rename,

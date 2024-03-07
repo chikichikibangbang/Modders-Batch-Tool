@@ -21,7 +21,9 @@ translation_dict = {
         ("*", "batch snap bones (only support tpose)"): "批量吸附骨骼位置（仅支持tpose）",
         ("*", "batch snap bones(undo)"): "批量吸附骨骼位置（还未做）", 
         ("*", "batch normalize and limit meshes by 4wt"): "批量规格化权重并设置总限值为4",
-        ("Operator", "convert 8wt to 4wt"): "8wt转换为4wt",    
+        ("Operator", "convert 8wt to 4wt"): "8wt转换为4wt", 
+        ("*", "batch split seam"): "批量分离缝合边",
+        ("Operator", "split seam"): "分离缝合边",       
 
         #Image Combiner
         ("*", "Image Combiner"): "贴图合并",
