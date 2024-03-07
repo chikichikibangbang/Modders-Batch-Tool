@@ -237,10 +237,14 @@ def main(context):
                 bpy.context.area.type = 'VIEW_3D'
                 bpy.ops.view3d.snap_selected_to_active()
                 #bpy.context.area.type = 'TEXT_EDITOR'
+                bpy.ops.armature.select_all(action='DESELECT')
                 if n[1] == '_011' or n[1] == '_015':
                     bpy.data.armatures[ArmatureName].edit_bones.active = bpy.data.armatures[ArmatureName].edit_bones[n[1]]
                     bpy.context.active_bone.head[1] = 0.018812 
                     bpy.context.active_bone.tail[1] = 0.068812
+                elif n[1] == '_130' or n[1] == '_140' or n[1] == '_230' or n[1] == '_240':
+                    bpy.data.armatures[ArmatureName].edit_bones.active = bpy.data.armatures[ArmatureName].edit_bones[n[1]]
+                    bpy.ops.armature.delete()
                 bpy.ops.armature.select_all(action='DESELECT')
                 #print(n[0],n[1])
     elif fixed_name_list[0][0] in name_in: 
@@ -257,10 +261,14 @@ def main(context):
                 bpy.context.area.type = 'VIEW_3D'
                 bpy.ops.view3d.snap_selected_to_active()
                 #bpy.context.area.type = 'TEXT_EDITOR'
+                bpy.ops.armature.select_all(action='DESELECT')
                 if n[1] == '_011' or n[1] == '_015':
                     bpy.data.armatures[ArmatureName].edit_bones.active = bpy.data.armatures[ArmatureName].edit_bones[n[1]]
                     bpy.context.active_bone.head[1] = 0.018812 
                     bpy.context.active_bone.tail[1] = 0.068812
+                elif n[1] == '_130' or n[1] == '_140' or n[1] == '_230' or n[1] == '_240':
+                    bpy.data.armatures[ArmatureName].edit_bones.active = bpy.data.armatures[ArmatureName].edit_bones[n[1]]
+                    bpy.ops.armature.delete()
                 bpy.ops.armature.select_all(action='DESELECT')
                 #print(n[0],n[1])
 
