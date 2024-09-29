@@ -24,7 +24,6 @@ Considering creating an instruction document. Most of the functions have been ma
 * **ZJCS** - For the function of cleaning zero vertex group.
 * **Dytser** - For the original function of renaming vertax group.
 * **Shotariya** - For the original function of material-combiner. - [Original Material-Combiner-Addon](https://github.com/Grim-es/material-combiner-addon/)
-* **AsteriskAmpersand** - For the function of splitting seam.
 
 # 一些中文内容
 B站id：不太亮的诸葛亮
